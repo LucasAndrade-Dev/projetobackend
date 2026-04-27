@@ -18,8 +18,6 @@ app.listen(PORT, () => {
 })
 // Obtendo os parametros passados pela linha de comando
 const mongoURL = process.env.MONGO_URL;
-
-//Configurando a conexao com o Banco de Dados
 mongoose.connect(mongoURL);
 mongoose.Promise = global.Promise;
 const db = mongoose.connection;
